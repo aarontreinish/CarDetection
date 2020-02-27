@@ -84,14 +84,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V4q-Xd-6Gd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4q-Xd-6Gd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvU-Sk-kMB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvU-Sk-kMB">
                                 <rect key="frame" x="20" y="20" width="63" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="tw6-Go-hcH"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
@@ -102,7 +101,19 @@
                                 <rect key="frame" x="87" y="64" width="240" height="111"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obU-OW-3ZP">
-                                        <rect key="frame" x="8" y="45" width="224" height="20.5"/>
+                                        <rect key="frame" x="8" y="8" width="224" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA9-2l-19k">
+                                        <rect key="frame" x="8" y="36.5" width="224" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPf-0K-pGY">
+                                        <rect key="frame" x="8" y="65" width="224" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -110,33 +121,35 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="obU-OW-3ZP" secondAttribute="trailing" constant="8" id="36R-HN-gNx"/>
-                                    <constraint firstAttribute="width" constant="240" id="3zy-jc-zza"/>
-                                    <constraint firstItem="obU-OW-3ZP" firstAttribute="top" secondItem="Qwx-eU-Ucw" secondAttribute="top" constant="45" id="5aJ-1W-9ZR"/>
-                                    <constraint firstAttribute="bottom" secondItem="obU-OW-3ZP" secondAttribute="bottom" constant="45.5" id="SRC-cK-nY1"/>
-                                    <constraint firstItem="obU-OW-3ZP" firstAttribute="leading" secondItem="Qwx-eU-Ucw" secondAttribute="leading" constant="8" id="fgH-g4-sEZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="OPf-0K-pGY" secondAttribute="trailing" constant="8" id="4eI-LV-c5Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="obU-OW-3ZP" secondAttribute="trailing" constant="8" id="Gbq-rl-cur"/>
+                                    <constraint firstItem="OPf-0K-pGY" firstAttribute="top" secondItem="QA9-2l-19k" secondAttribute="bottom" constant="8" id="GuI-0e-Pzy"/>
+                                    <constraint firstItem="QA9-2l-19k" firstAttribute="leading" secondItem="Qwx-eU-Ucw" secondAttribute="leading" constant="8" id="Nwh-m5-NYW"/>
+                                    <constraint firstItem="OPf-0K-pGY" firstAttribute="leading" secondItem="Qwx-eU-Ucw" secondAttribute="leading" constant="8" id="QJC-YA-4yr"/>
+                                    <constraint firstItem="obU-OW-3ZP" firstAttribute="leading" secondItem="Qwx-eU-Ucw" secondAttribute="leading" constant="8" id="RR0-sj-YX9"/>
+                                    <constraint firstItem="QA9-2l-19k" firstAttribute="top" secondItem="obU-OW-3ZP" secondAttribute="bottom" constant="8" id="kUC-2m-eVD"/>
+                                    <constraint firstItem="obU-OW-3ZP" firstAttribute="top" secondItem="Qwx-eU-Ucw" secondAttribute="top" constant="8" id="r3G-uV-ldz"/>
+                                    <constraint firstAttribute="trailing" secondItem="QA9-2l-19k" secondAttribute="trailing" constant="8" id="t0x-m0-1tr"/>
+                                    <constraint firstAttribute="height" constant="111" id="xMd-o6-zHw"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="YRj-ua-KXm" firstAttribute="trailing" secondItem="V4q-Xd-6Gd" secondAttribute="trailing" id="0Gn-Hu-vUf"/>
-                            <constraint firstItem="QvU-Sk-kMB" firstAttribute="leading" secondItem="YRj-ua-KXm" secondAttribute="leading" constant="20" id="AU3-56-eU7"/>
-                            <constraint firstItem="YRj-ua-KXm" firstAttribute="trailing" secondItem="Qwx-eU-Ucw" secondAttribute="trailing" constant="87" id="Ck1-4S-Xei"/>
-                            <constraint firstItem="V4q-Xd-6Gd" firstAttribute="leading" secondItem="YRj-ua-KXm" secondAttribute="leading" id="OOy-35-SRP"/>
-                            <constraint firstItem="QvU-Sk-kMB" firstAttribute="top" secondItem="YRj-ua-KXm" secondAttribute="top" constant="20" id="VMF-dg-q8N"/>
-                            <constraint firstItem="Qwx-eU-Ucw" firstAttribute="top" secondItem="YRj-ua-KXm" secondAttribute="top" constant="64" id="ZDM-Qp-1wD"/>
-                            <constraint firstAttribute="bottom" secondItem="V4q-Xd-6Gd" secondAttribute="bottom" id="llF-ws-GVH"/>
-                            <constraint firstItem="V4q-Xd-6Gd" firstAttribute="top" secondItem="YRj-ua-KXm" secondAttribute="top" id="tp2-hG-rY3"/>
-                            <constraint firstItem="Qwx-eU-Ucw" firstAttribute="leading" secondItem="YRj-ua-KXm" secondAttribute="leading" constant="87" id="uLX-sW-1RB"/>
+                            <constraint firstItem="Qwx-eU-Ucw" firstAttribute="leading" secondItem="YRj-ua-KXm" secondAttribute="leading" constant="87" id="CEd-vb-9SR"/>
+                            <constraint firstItem="Qwx-eU-Ucw" firstAttribute="top" secondItem="YRj-ua-KXm" secondAttribute="top" constant="64" id="Rce-Ty-WUO"/>
+                            <constraint firstItem="YRj-ua-KXm" firstAttribute="trailing" secondItem="Qwx-eU-Ucw" secondAttribute="trailing" constant="87" id="TsT-B6-zHN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YRj-ua-KXm"/>
                     </view>
                     <navigationItem key="navigationItem" id="DHL-ta-erQ"/>
                     <connections>
                         <outlet property="exitButton" destination="QvU-Sk-kMB" id="OwF-sv-leW"/>
+                        <outlet property="labelView" destination="Qwx-eU-Ucw" id="a9m-MH-Rqn"/>
                         <outlet property="makeLabel" destination="obU-OW-3ZP" id="zkP-br-14F"/>
+                        <outlet property="modelLabel" destination="QA9-2l-19k" id="Bft-0F-44l"/>
                         <outlet property="pictureImageView" destination="V4q-Xd-6Gd" id="8EM-7V-nFQ"/>
+                        <outlet property="yearLabel" destination="OPf-0K-pGY" id="DcF-OR-Mhx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vH4-Ch-hvr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
